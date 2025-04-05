@@ -38,14 +38,13 @@ func _ready() -> void:
 		print("IOSBridgePlugin send_message ", m)
 	else:
 		printerr("%s singleton not found!" % "IOSBridgePlugin")
-```
 
-```
 func _call_received(msg):
 	print("IOSBridgePlugin _call_received", msg)
 ```
 
-
+```
 sendMessage msg1 : test 123
 IOSBridgePlugin _call_received[ObjC signal]: test 123
 IOSBridgePlugin send_message [ObjC Received]: test 123
+```
