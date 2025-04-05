@@ -1,4 +1,3 @@
----
 # IOSBridge Plugin
 
 Bridge Godot Engine games to iOS native features
@@ -26,6 +25,7 @@ scons platform=ios target=template_debug arch=arm64 ios_simulator=no
 scons platform=ios target=template_debug arch=arm64 ios_simulator=yes
 cd ..
 scons platform=ios target=release_debug arch=arm64 ios_simulator=yes target_name=IOSBridgePlugin version=4.3
+```
 
 ### Usage
 ```
@@ -38,11 +38,14 @@ func _ready() -> void:
 		print("IOSBridgePlugin send_message ", m)
 	else:
 		printerr("%s singleton not found!" % "IOSBridgePlugin")
-
-func _call_received(msg):
-	print("IOSBridgePlugin _call_received", msg)
+```
 
 ```
+func _call_received(msg):
+	print("IOSBridgePlugin _call_received", msg)
+```
+
+
 sendMessage msg1 : test 123
 IOSBridgePlugin _call_received[ObjC signal]: test 123
 IOSBridgePlugin send_message [ObjC Received]: test 123
